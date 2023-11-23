@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Atividade 013 - Lourenço Sequeira</title>
+    <link href="style.css" rel="stylesheet">
+        
+  </head>
+
+  <body>
+  <!--Título-->
+    <h1>Gerador de números aleatórios com apostas</h1>
+  <!--Escolha de modo de jogo com ou sem pistas-->
+ 
+  <!--Tabela de saldos-->
+    <table>
+    <!--Dados de utilizador e gestão da carteira-->
+      <tr>
+        <th style="width: 4%;">Valor em carteira:</th>
+        <th><div id="saldoc"></div></th>
+        <th style="width: 4%;">Carrega a tua carteira:</th>
+        <th><input type="number" placeholder="Valor a adicionar (euros)" id="depositar" class="input">
+        <img id="imagem" src="Imagens\1x1-0000ff7f.png"></th>
+      </tr>
+      <tr>
+        <th style="width: 4%;">Aposta monetária:</th>
+        <th><input type="number" placeholder="Aposta (euros)" id="apostam" class="input">
+        <img id="imagem1" src="Imagens\1x1-0000ff7f.png"></th>
+        <th style="width: 4%;">Aposta numérica:</th>
+        <th><input type="number" placeholder="Aposta (1 a 10)" id="apostan" class="input"></th>
+      </tr>
+      <tr>
+        <th style="width: 4%;">
+        <form name="myForm" required>Nome de utilizador:
+        </th>
+        <th style="width: 4%;"><input type="text" class="input" id="utilizador" placeholder="Insira um nome" style="text-align: center;" name="fname"></form></th>
+      <!--Butão de confirmação de dados e aposta-->
+        
+      <!--Butão de sorteio-->   
+        <th colspan="2" style="width: 4%;">
+          <button type="button" onclick="inicio()" class="buttonsorteio" style="background-color: rgb(100, 255, 100);" id="sorteio">Sortear número</button>
+        </th>
+      </tr>
+      <tr>
+        <th colspan="2" style="width: 4%;">
+          <button type="button" onclick="saldos();imagens()" class="desativar" id="desativar" style="background-color: rgb(100, 255, 100);">Confirmar dados e apostas (sem pistas)</button>
+        </th>
+        <th colspan="2" style="width: 4%;">
+          <button type="button" onclick="saldo();imagens()" class="desativar" id="desativar2" style="background-color: rgb(100, 255, 100);">Confirmar dados e apostas (com pistas)</button>
+        </th> 
+      </tr>
+           
+    </table>
+    <!--Input para onde o nº sorteado vai-->
+    <input type="number" id="nsorteado" class="nsorteado">
+    <!--Tabela de regista das tentativas, dicas e novo saldo-->
+    <table id="historico" class="historico">
+      <tr>
+        <td>Tentativas:</td>
+        <td>Números apostados:</td>
+        <td>Pista:</td>
+      </tr>
+    </table>
+    <!--Cheque de utilizador-->
+      <div id="cheque" class="legenda"></div>
+      <script src="script.js"></script>
+    </body>
+</html>
+
